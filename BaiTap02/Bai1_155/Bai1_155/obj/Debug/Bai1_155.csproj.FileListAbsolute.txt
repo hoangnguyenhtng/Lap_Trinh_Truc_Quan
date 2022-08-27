@@ -1,0 +1,11 @@
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\bin\Debug\Bai1_155.exe.config
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\bin\Debug\Bai1_155.exe
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\bin\Debug\Bai1_155.pdb
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.csproj.AssemblyReference.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.csproj.SuggestedBindingRedirects.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.Form1.resources
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.Properties.Resources.resources
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.csproj.GenerateResource.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.csproj.CoreCompileInputs.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.exe
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\BaiTap1\BaiTap02\Bai1_155\Bai1_155\obj\Debug\Bai1_155.pdb
