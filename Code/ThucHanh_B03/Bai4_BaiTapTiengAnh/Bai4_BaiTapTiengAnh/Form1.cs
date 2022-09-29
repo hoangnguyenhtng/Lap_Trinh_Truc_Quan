@@ -16,5 +16,10 @@ namespace Bai4_BaiTapTiengAnh
         {
             InitializeComponent();
         }
+
+        private void bàiĐiềnTừ1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
