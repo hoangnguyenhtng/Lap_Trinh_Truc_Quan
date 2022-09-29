@@ -1,0 +1,12 @@
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\bin\Debug\Bai4_BaiTapTiengAnh.exe.config
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\bin\Debug\Bai4_BaiTapTiengAnh.exe
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\bin\Debug\Bai4_BaiTapTiengAnh.pdb
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.csproj.AssemblyReference.cache
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.csproj.SuggestedBindingRedirects.cache
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.Form1.resources
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.FormBaiTapDienTu.resources
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.Properties.Resources.resources
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.csproj.GenerateResource.cache
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.csproj.CoreCompileInputs.cache
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.exe
+E:\UTC\Nam3\Ki1\Lap_Trinh_Truc_Quan\Code\ThucHanh_B03\Bai4_BaiTapTiengAnh\Bai4_BaiTapTiengAnh\obj\Debug\Bai4_BaiTapTiengAnh.pdb
