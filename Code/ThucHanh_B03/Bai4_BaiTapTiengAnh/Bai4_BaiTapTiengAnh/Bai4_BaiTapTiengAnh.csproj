@@ -58,6 +58,7 @@
     <Compile Include="FormBaiTapDienTu.Designer.cs">
       <DependentUpon>FormBaiTapDienTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDienTu2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
