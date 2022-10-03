@@ -64,7 +64,7 @@ namespace QLKhachHang
                 MessageBox.Show("Nhập lại vì mã < 6");
                 kt = 0;
             }
-            if (txtDiaChi.TextLength == 0 || tbTenKH.TextLength == 0)
+            if (txtDiaChi.TextLength == 0 || txtTenKH.TextLength == 0)
             {
                 MessageBox.Show("Nhập lại vì tên hoặc địa chỉ rỗng");
                 kt = 0;
@@ -118,17 +118,15 @@ namespace QLKhachHang
 
                     }
                 }
-                lbDanhSach.Items.Add(txtMaKH.Text + " | " + tbTenKH.Text + " | " +
+                lbDanhSach.Items.Add(txtMaKH.Text + " | " + txtTenKH.Text + " | " +
                     txtDiaChi.Text
                     + " | " + dtpNgayGui.Text + " | " + txtSoTienGui.Text + " | "
                     + cbThoiGianGui.Text + " tháng | " + tienlai);
-                StaticData._Nguoigui.Add(new NguoiGui(Convert.ToInt32(txtMaKH.Text), tbTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSoTienGui.Text),
+                StaticData._Nguoigui.Add(new NguoiGui(Convert.ToInt32(txtMaKH.Text), txtTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSoTienGui.Text),
                     dtpNgayGui.Text, cbThoiGianGui.Text, tienlai
                   ));
 
-
-
-
-
             }
         }
+    }
+};

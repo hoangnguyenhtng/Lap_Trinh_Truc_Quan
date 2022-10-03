@@ -1,0 +1,6 @@
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\Lap_Trinh_Truc_Quan\Code\ThucHanh_B02\QLKhachHang\QLKhachHang\obj\Debug\QLKhachHang.csproj.AssemblyReference.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\Lap_Trinh_Truc_Quan\Code\ThucHanh_B02\QLKhachHang\QLKhachHang\obj\Debug\QLKhachHang.csproj.SuggestedBindingRedirects.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\Lap_Trinh_Truc_Quan\Code\ThucHanh_B02\QLKhachHang\QLKhachHang\obj\Debug\QLKhachHang.Form1.resources
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\Lap_Trinh_Truc_Quan\Code\ThucHanh_B02\QLKhachHang\QLKhachHang\obj\Debug\QLKhachHang.Properties.Resources.resources
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\Lap_Trinh_Truc_Quan\Code\ThucHanh_B02\QLKhachHang\QLKhachHang\obj\Debug\QLKhachHang.csproj.GenerateResource.cache
+E:\utc_dai_cuong\nam3\Nam3_KyI\LapTrinhTrucQuan\THH\Lap_Trinh_Truc_Quan\Code\ThucHanh_B02\QLKhachHang\QLKhachHang\obj\Debug\QLKhachHang.csproj.CoreCompileInputs.cache

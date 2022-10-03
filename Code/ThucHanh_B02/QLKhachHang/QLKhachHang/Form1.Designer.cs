@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpNgayGui = new System.Windows.Forms.DateTimePicker();
             this.btnMoi = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,10 +47,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbDanhSach = new System.Windows.Forms.ListBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
-            this.dtpNgayGui = new System.Windows.Forms.DateTimePicker();
-            this.lstDanhSach = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -79,6 +79,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin khách hàng gửi tiết kiệm";
             // 
+            // dtpNgayGui
+            // 
+            this.dtpNgayGui.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayGui.Location = new System.Drawing.Point(162, 193);
+            this.dtpNgayGui.Name = "dtpNgayGui";
+            this.dtpNgayGui.Size = new System.Drawing.Size(135, 20);
+            this.dtpNgayGui.TabIndex = 5;
+            // 
             // btnMoi
             // 
             this.btnMoi.Location = new System.Drawing.Point(223, 368);
@@ -87,6 +95,7 @@
             this.btnMoi.TabIndex = 13;
             this.btnMoi.Text = "Thêm mới";
             this.btnMoi.UseVisualStyleBackColor = true;
+            this.btnMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // btnThem
             // 
@@ -96,6 +105,7 @@
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm vào";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThemVaoDS_Click);
             // 
             // groupBox2
             // 
@@ -220,16 +230,25 @@
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(100, 20);
             this.txtMaKH.TabIndex = 0;
+            this.txtMaKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaKH_KeyPress);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lstDanhSach);
+            this.groupBox3.Controls.Add(this.lbDanhSach);
             this.groupBox3.Location = new System.Drawing.Point(387, 30);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(390, 321);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách khách hàng";
+            // 
+            // lbDanhSach
+            // 
+            this.lbDanhSach.FormattingEnabled = true;
+            this.lbDanhSach.Location = new System.Drawing.Point(15, 28);
+            this.lbDanhSach.Name = "lbDanhSach";
+            this.lbDanhSach.Size = new System.Drawing.Size(355, 277);
+            this.lbDanhSach.TabIndex = 0;
             // 
             // btnTimKiem
             // 
@@ -249,22 +268,6 @@
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // dtpNgayGui
-            // 
-            this.dtpNgayGui.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayGui.Location = new System.Drawing.Point(162, 193);
-            this.dtpNgayGui.Name = "dtpNgayGui";
-            this.dtpNgayGui.Size = new System.Drawing.Size(135, 20);
-            this.dtpNgayGui.TabIndex = 5;
-            // 
-            // lstDanhSach
-            // 
-            this.lstDanhSach.FormattingEnabled = true;
-            this.lstDanhSach.Location = new System.Drawing.Point(15, 28);
-            this.lstDanhSach.Name = "lstDanhSach";
-            this.lstDanhSach.Size = new System.Drawing.Size(355, 277);
-            this.lstDanhSach.TabIndex = 0;
             // 
             // Form1
             // 
@@ -309,7 +312,7 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.DateTimePicker dtpNgayGui;
-        private System.Windows.Forms.ListBox lstDanhSach;
+        private System.Windows.Forms.ListBox lbDanhSach;
     }
 }
 
