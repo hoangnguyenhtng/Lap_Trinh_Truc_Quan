@@ -19,7 +19,9 @@ namespace Bai4_BaiTapTiengAnh
 
         private void bàiĐiềnTừ1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            FormBaiTapDienTu formBaiTapDienTu = new FormBaiTapDienTu();
+            formBaiTapDienTu.MdiParent = this;
+            formBaiTapDienTu.Show();
         }
     }
 }
