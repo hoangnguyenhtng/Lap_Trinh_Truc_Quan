@@ -17,6 +17,9 @@ namespace QLKhachHang
         {
             InitializeComponent();
         }
+        
+        List<NguoiGui> listNguoiGuis = new List<NguoiGui>();
+
         private void AddComboBox()
         {
             cbThoiGianGui.Items.Add("1");
@@ -122,11 +125,24 @@ namespace QLKhachHang
                     txtDiaChi.Text
                     + " | " + dtpNgayGui.Text + " | " + txtSoTienGui.Text + " | "
                     + cbThoiGianGui.Text + " tháng | " + tienlai);
-                StaticData._Nguoigui.Add(new NguoiGui(Convert.ToInt32(txtMaKH.Text), txtTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSoTienGui.Text),
+                listNguoiGuis.Add(new NguoiGui(Convert.ToInt32(txtMaKH.Text), txtTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSoTienGui.Text),
                     dtpNgayGui.Text, cbThoiGianGui.Text, tienlai
                   ));
+                StaticData._NguoiGui = listNguoiGuis;
 
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            AddComboBox();
+            this.KeyPreview = true;
         }
     }
 };

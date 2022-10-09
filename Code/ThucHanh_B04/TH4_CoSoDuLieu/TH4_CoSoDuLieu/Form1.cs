@@ -16,5 +16,29 @@ namespace TH4_CoSoDuLieu
         {
             InitializeComponent();
         }
+
+        DataBaseProcess dataBaseProcess = new DataBaseProcess();
+
+        private void hienChiTiet(bool hien)
+        {
+            txtMaSP.Enabled = hien;
+            txtTenSP.Enabled = hien;
+            dtpNgayHH.Enabled = hien;
+            dtpNgaySX.Enabled = hien;
+            txtDonVi.Enabled = hien;
+            txtDonGia.Enabled = hien;
+            txtGhiChu.Enabled = hien;
+            //Ẩn hiện 2 nút Lưu và Hủy
+            btnLuu.Enabled = hien;
+            btnHuy.Enabled = hien;
+        }
+
+        private void frmMatHang_Load(bool hien)
+        {
+            dgvMatHang.DataSource = dataBaseProcess.DataReader("select * from tblMatHang");
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            hienChiTiet(false);
+        }
     }
 }
