@@ -17,7 +17,7 @@ namespace TH4_CoSoDuLieu
             InitializeComponent();
         }
 
-        DataBaseProcess dataBaseProcess = new DataBaseProcess();
+        classes.DataBaseProcess dataBaseProcess = new classes.DataBaseProcess();
 
         private void hienChiTiet(bool hien)
         {
@@ -33,7 +33,7 @@ namespace TH4_CoSoDuLieu
             btnHuy.Enabled = hien;
         }
 
-        private void frmMatHang_Load(bool hien)
+        private void frmMatHang_Load(object sender, EventArgs e)
         {
             dgvMatHang.DataSource = dataBaseProcess.DataReader("select * from tblMatHang");
             btnSua.Enabled = false;

@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classes\DataBaseProcess.cs" />
+    <Compile Include="classes\DataBaseProcess1.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
