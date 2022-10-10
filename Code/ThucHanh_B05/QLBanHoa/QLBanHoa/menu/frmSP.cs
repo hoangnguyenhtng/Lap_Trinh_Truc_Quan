@@ -10,6 +10,7 @@ namespace QLBanHoa.menu
         classes.CommonFunctions funciton = new classes.CommonFunctions();
         classes.ConnectData data = new classes.ConnectData();
         String fileAnh;
+        public static string userName = "";
         public frmSP()
         {
             InitializeComponent();
@@ -29,6 +30,9 @@ namespace QLBanHoa.menu
             dgvHang.Columns[6].HeaderText = "Ảnh";
             dgvHang.Columns[7].HeaderText = "Ghi chú";
             ResetValue();
+
+            lblDangNhap.Text = "Xin chào: " + userName;
+
         }
         void LoadData()
         {
@@ -48,7 +52,7 @@ namespace QLBanHoa.menu
             fileAnh = dgvHang.CurrentRow.Cells[6].Value.ToString();
             try
             {
-                picAnh.Image = Image.FromFile(Application.StartupPath + "\\Images\\" + fileAnh);
+                picAnh.Image = Image.FromFile(Application.StartupPath + "\\images\\" + fileAnh);
             } catch
             {
                 picAnh.Image = null;
@@ -86,8 +90,8 @@ namespace QLBanHoa.menu
             }
             // Thêm mới hàng vào DataBase
             string sqlInsert = "insert into tblHang values('" + txtMa.Text + "', N'" + txtTen.Text + "', '" + cbbChatLieu.SelectedValue.ToString() +
-                "', '" + int.Parse(txtSoLuong.Text) + "', '" + float.Parse(txtDonGiaNhap.Text) + "', '" + float.Parse(txtDonGiaBan.Text) + "', N'" +
-                txtGhiChu.Text + "')";
+                "', '" + int.Parse(txtSoLuong.Text) + "', '" + float.Parse(txtDonGiaNhap.Text) + "', '" + float.Parse(txtDonGiaBan.Text) + "', '" + 
+                fileAnh + "' , N'" + txtGhiChu.Text + "')";
             data.UpdateData(sqlInsert);
             LoadData();
             MessageBox.Show("Thêm mới thành công!");
@@ -118,6 +122,8 @@ namespace QLBanHoa.menu
                 try
                 {
                     data.UpdateData("delete tblHang where MaHang = '" + txtMa.Text + "'");
+                    LoadData();
+                    ResetValue();
                 }
                 catch
                 {
@@ -139,6 +145,26 @@ namespace QLBanHoa.menu
                 "', GhiChu=N'" + txtGhiChu.Text +
                 "' where MaHang='" + txtMa.Text + "'");
             LoadData();
+            ResetValue();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Ban co muon dang xuat khong?", "Thong bao",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+                
+        }
+
+        private void btnBoQua_Click(object sender, EventArgs e)
+        {
             ResetValue();
         }
     }
