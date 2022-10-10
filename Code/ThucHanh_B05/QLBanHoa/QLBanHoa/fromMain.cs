@@ -9,7 +9,7 @@ namespace QLBanHoa
         {
             InitializeComponent();
         }
-
+        public static string userName = "";
         private void chatLieuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             /*
@@ -67,6 +67,11 @@ namespace QLBanHoa
             {
                 ActiveChildForm("frmSP");
             }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
