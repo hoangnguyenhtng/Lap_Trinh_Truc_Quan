@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TH4_CoSoDuLieu
+namespace classes
 {
     public class DataBaseProcess
     {
@@ -48,6 +48,7 @@ namespace TH4_CoSoDuLieu
             sqlCommand.Connection = sqlConnection;
             sqlCommand.CommandText = sql;
             sqlCommand.ExecuteNonQuery();
+            CloseConnect();
         }
     }
 }
