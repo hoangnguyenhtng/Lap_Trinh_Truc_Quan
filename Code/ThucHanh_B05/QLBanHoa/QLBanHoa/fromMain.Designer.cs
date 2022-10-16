@@ -97,15 +97,16 @@
             // sanPhamToolStripMenuItem
             // 
             this.sanPhamToolStripMenuItem.Name = "sanPhamToolStripMenuItem";
-            this.sanPhamToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.sanPhamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sanPhamToolStripMenuItem.Text = "San Pham";
             this.sanPhamToolStripMenuItem.Click += new System.EventHandler(this.sanPhamToolStripMenuItem_Click);
             // 
             // hoaDonBanToolStripMenuItem
             // 
             this.hoaDonBanToolStripMenuItem.Name = "hoaDonBanToolStripMenuItem";
-            this.hoaDonBanToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.hoaDonBanToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.hoaDonBanToolStripMenuItem.Text = "Hoa Don Ban";
+            this.hoaDonBanToolStripMenuItem.Click += new System.EventHandler(this.hoaDonBanToolStripMenuItem_Click);
             // 
             // baoCaoThongKeToolStripMenuItem
             // 

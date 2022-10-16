@@ -73,5 +73,20 @@ namespace QLBanHoa
         {
 
         }
+
+        private void hoaDonBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("frmSP"))
+            {
+                menu.frmHDBan frm = new menu.frmHDBan();
+                frm.MdiParent = this;
+                frm.Dock = DockStyle.Fill;
+                frm.Show();
+            }
+            else
+            {
+                ActiveChildForm("frmSP");
+            }
+        }
     }
 }

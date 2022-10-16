@@ -60,6 +60,12 @@
     <Compile Include="menu\frmDangNhap.Designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="menu\frmHDBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu\frmHDBan.Designer.cs">
+      <DependentUpon>frmHDBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="menu\frmSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menu\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu\frmHDBan.resx">
+      <DependentUpon>frmHDBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menu\frmSP.resx">
       <DependentUpon>frmSP.cs</DependentUpon>
