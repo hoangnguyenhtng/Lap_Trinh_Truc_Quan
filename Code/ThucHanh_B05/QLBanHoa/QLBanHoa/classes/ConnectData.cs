@@ -10,7 +10,7 @@ namespace QLBanHoa.classes
 {
     internal class ConnectData
     {
-        string strConnect = "Data Source=TRANHUYHIEP;Initial Catalog=BanHang;Integrated Security=True";
+        string strConnect = "Data Source=MYPC;Initial Catalog=DuLieu;Integrated Security=True";
         SqlConnection sqlConnection = null;
         
         // open connect method
