@@ -143,5 +143,112 @@ namespace QLBanHoa.menu
             txtThanhTien.Text = "";
             dgvChiTietHD.DataSource = null;
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            string sqlinsertHDBan;
+            float slMua, slCon, tongtien;
+            // kiểm tra tính đầy đủ của dữ liệu
+            if(cboMaNV.Text.Trim() == "")
+            {
+                MessageBox.Show("Chưa có thông tin nhân viên bán");
+                return;
+            }
+            if(cboMaKhach.Text.Trim() == "")
+            {
+                MessageBox.Show("Chưa có thông tin khách hàng");
+                return;
+            }
+            if(cboMaHang.Text.Trim() == "")
+            {
+                MessageBox.Show("Chưa có thông tin sản phẩm");
+                return;
+            }
+            if(txtSoLuong.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa nhập số lượng sản phẩm");
+                return;
+            }
+            // khi lưu hóa đơn xảy ra hai trường hợp.
+            // TH1: tblHDBan đã có hóa đơn với mã vừa sinh => update lại hóa đơn
+            // TH2: chưa có hóa đơn                        => insert hóa đơn
+            DataTable dtHDBan = DataTable.ReadData("select * from tblHDBan where MaHDBan='" +
+                txtMaHD.Text + "'");
+            dtNgayBan = Convert.ToDateTime(dataNgayBan.Value.ToLongDateString());
+            if(dtHDBan.Rows.Count == 0)
+            {
+                sqlinsertHDBan = "insert into tblHDBan values('" + 
+                    txtMaHD.Text + "', '" +
+                    cboMaNV.Text + "'," +
+                    String.Format("{0:MM/dd/yyyy}", dtNgayBan) + ",'" +
+                    cboMaKhach.SelectedValue + "','" +
+                    txtThanhTien.Text + "')";
+                data.UpdateData(sqlinsertHDBan);
+            }
+
+            // tblHD đã tồn tại
+            // 1. kiểm tra số lượng còn không
+            DataTable dtHang = DataTable.ReadData("select * from tblHang where MaHang = '" +
+                cboMaHang.SelectedValue + "'");
+            slCon = float.Parse(dtHang.Rows[0]["SoLuong"]).ToString();
+            slMua = float.Parse(txtSoLuong.Text);
+            if(slCon < slMua)
+            {
+                MessageBox.Show("Không còn đủ số lượng. Sản phẩm " + txtTenHang.Text + " chỉ còn " + slCon);
+                txtSoLuong.Focus();
+                return;
+            }
+            slCon = slCon - slMua;
+            // insert vào bảng tblChiTiet
+            data.UpdateData("insert into tblChiTietHDBan values('" + txtMaHD.Text +
+                "','" + cboMaHang.SelectedValue + 
+                "'," + (int) slMua +
+                ",'" + txtGiamGia.Text +
+                "','" + txtThanhTien.Text +
+                "')");
+            // update lại bảng tblHang
+            data.UpdateData("update tblHang set SoLuong = " + (int)slCon + " where MaHang = " +
+                cboMaHang.SelectedValue);
+            // update tblcHDBan cho tổng tiền
+            DataTale dtChiTiet = data.ReadData("select * from tblChiTietHDBan = " +
+                txtMaHD.Text);
+            tongtien = 0;
+            for(int i  = 0; i < dtChiTiet.Rows.Count; i++)
+            {
+                tongtien = tongtien + float.Parse(dtChiTiet.Rows[i]["ThanhTien"].ToString());
+            }
+            data.UpdateData("update tblHDBan set TongTien = '" +
+                tongtien.ToString() +
+                "' where MaHDBan = '" + txtMaHD.Text);
+            // hiển thị dữ liệu lên datagridview
+            dgvChiTietHD.DataSource = dtChiTiet;
+
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            // hủy hóa đơn
+            // 1. Update lại số lượng hàng trong bảng tblHang
+            float slCon, slMua;
+            for(int i = 0; i < dgvChiTietHD.Rows.Count - 1; i++)
+            {
+                DataTable dtHang = data.ReadData("select * from tblHang where MaHang = " +
+                    dgvChiTietHD.Rows[i].Cells[0].Value.ToString());
+                slCon = float.Parse(dtHang.Rows[0]["SoLuong"].ToString());
+                slMua = float.Parse(dgvChiTietHD.Rows[i].Cells[2].Value.ToString());
+                slCon = slCon + slMua;
+                data.UpdateData("Update tblHang set SoLuong = " +
+                    (int)slCon + "where MaHang = '" +
+                    dgvChiTietHD.Rows[i].Cells[0].Value);
+            }
+            // 2. xóa hóa đơn ra khỏi database
+            data.Update("delete tblHDBan where MaHDBan = '" + txtMaHD.Text + "'");
+            ResetValue();
+        }
+
+        private void dgvChiTietHD_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
     }
 }
