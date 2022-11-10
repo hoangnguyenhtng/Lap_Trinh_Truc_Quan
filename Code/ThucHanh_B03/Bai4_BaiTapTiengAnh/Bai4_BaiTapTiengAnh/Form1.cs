@@ -54,5 +54,10 @@ namespace Bai4_BaiTapTiengAnh
             formBaiTapDienTu.MdiParent = this;
             formBaiTapDienTu.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
